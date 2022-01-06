@@ -1,0 +1,10 @@
+
+The script collects GPS data from G-STAR IV device
+
+Installation on NorNet node
+
+To run metadata script on NorNet node, you need to install the script independanies:
+
+	bash install_dependancies.sh
+
+The gps-collector is going to be run as a service 
