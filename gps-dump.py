@@ -50,8 +50,8 @@ class gps_device():
 
     def parse_line(self, ts, line):
         items = line.split(',')
-        return {'ts': ts, 'lat': str(self.decimal_degrees(*self.dm(float((items[3])))))+items[4],
-                    'lon': str(self.decimal_degrees(*self.dm(float((items[5])))))+items[6], 'speed': items[7]}
+        return {'ts': ts, 'lat': self.decimal_degrees(*self.dm(float((items[3])))),
+                    'lon': self.decimal_degrees(*self.dm(float((items[5])))), 'speed': items[7]}
 
     def dm(self, x):
         degrees = int(x) // 100
